@@ -135,14 +135,13 @@ sudo npm install -g istanbul
 ```
 
 
-## Verifying Installation
+## Creating Your Repository
 
-If you have not already, you will want to fork the ICG development repository and git it.
+If you are going to modify or make contribution to Barista itself, you can simply fork the Barista Repository and you are up and running.
 
-It is easy to fork a repository in Github.  Just go to the repository page in github.com and click the Fork button (Look in the upper left)
+If you are going to use Barista as the basis for a new project, you will probably not want to fork the repository, rather you will want to add Barista as a remote and pull the contents into your project.  Since this is likely the most common pattern, let's walk through those steps.  Follow along with your own repo.
 
-
-Now you will have your very own github repository.  Now you can clone this new repository.  In the terminal, navigate to the directory into which you want the repository cloned:
+First, go to Github and create your own repo.  Now you can clone this new repository.  In the terminal, navigate to the directory into which you want the repository cloned:
 
 ```
 git clone [Your Github Repo URL]
@@ -154,6 +153,17 @@ This will create a new directory containing the github repository.  Navigate to 
 cd [Your Repo Directory]
 ```
 
+Now you can add Barista as a remote and pull the contents for your new repository from there.
+
+```
+git remote add barista git@github.com:ICGGroup/Barista.git
+```
+
+Now pull from Barista.  
+
+```
+git pull -X ours barista master
+```
 
 If you think you may, someday, possibly, ever, in a blue moon might want to contrubte base to the repo from which you just forked (or even if you don't since it wont hurt anything) create a ```contrib``` branch.
 
@@ -162,7 +172,11 @@ git branch contrib
 ```
 
 
-That's it, now you are ready to use NPM to install the necessary components.  This is very easy and can be accomplished with a single command
+That's it, now you are ready to use NPM to install the necessary components.  
+
+## Completing and Verifying Installation
+
+Installing the required node modules is very easy and can be accomplished with a single command
 
 ```
 npm install
@@ -550,6 +564,12 @@ You can create resources of any shape or type on the fly, but **beware** the dev
 
 ## Contributing
 
-If you are writing code that will be committed to the repository, There are a few things you will need to be aware of.
+If you are writing code that will be committed to the repository, There are a few things you will need to be aware of.  
+
+First, you should use the ```contrib``` branch that we created earlier to makes changes that you with to push back.  This will keep us from having to cherry pick the commit.
+
+Second, while we are still working to outfit Barista with a full set of tests, please make sure that you include tests in your commit.
+
+
 
 TODO:  Brief discussion on contributing back to Barista
