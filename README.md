@@ -5,7 +5,7 @@ Based on the awesome [Yeoman](http://yeoman.io/), Barista is the front end devel
 * Minimize individual developer setup time
 * Provide an efficient development workflow
 * Encourage test driven development 
-* Provide tools evaluate test coverage
+* Provide tools to evaluate test coverage
 * Allow front end development with no dependencies on specific back-end components
 
 
