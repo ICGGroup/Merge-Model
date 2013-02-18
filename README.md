@@ -72,6 +72,29 @@ brew install mongodb
 
 Follow the Homebrew instructions to have mongo db start automatically.
 
+To make sure MongoDB is running:
+
+```
+mongo
+```
+
+If MongoDB is running and all is well you will see somthing like this
+
+```
+MongoDB shell version: 2.2.3
+connecting to: test
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+  http://docs.mongodb.org/
+Questions? Try the support group
+  http://groups.google.com/group/mongodb-user
+> 
+```
+
+```Ctrl-C``` to quit.
+
+
 ### [Yeoman](http://yeoman.io/)
 
 Yeoman 1.0 is more than just a tool. It's a workflow; a collection of tools and best practices working in harmony to make developing for the web even better.
@@ -82,7 +105,16 @@ In the terminal (may require ```su``` privileges):
 sudo npm install -g yeoman
 ```
 
-**Note:** Recent releases of Node and NPM have introduced some issues with the yeoman install.  if you have trouble installing yeoman, try the following
+**Note:** Recent releases of Node and NPM have introduced some issues with the yeoman install.  if you have trouble installing yeoman you may see something like this
+
+```
+npm ERR! 
+npm ERR! Additional logging details can be found in:
+npm ERR!     /Users/jdouglas/npm-debug.log
+npm ERR! not ok code 0
+```
+
+If you do, try the following
 
 ```
 sudo rm -r -f /usr/local/lib/node_modules/yeoman/  
@@ -282,9 +314,7 @@ Barista also encourage the use of Compass in the compilation of style sheets, th
 ```
 ...
 Running "tempcopy" task
-......................................
-......................................
-...................
+...............................................................................................
 >> .../app -> .../public
 ...
 ```
@@ -363,13 +393,7 @@ Failed Tests
 ...
 ```
 
-Each time a watched files is changed, the entire test suite is run.  Since one of our tests, actually our _only_ test, expects ```window.something``` to equal ```AWESOME```, the test fails.  We will go fix this test later.
-
-```
-...
-Running "watch" task
-Waiting...
-```
+Each time a watched files is changed, the entire test suite is run.  Since one of our tests, actually our _only_ test, expects ```window.something``` to equal ```AWESOME```, the test fails.  Let's fix that.
 
 #### Modifying A Test
 
@@ -399,7 +423,8 @@ Preparing Test Execution Environment
 
 #### Looking at Coverage Data
 
-Let take a look at that coverage data.  In the terminal, type the following command.  If you have been following along, you will need to stop the yeoman server, use ```Ctrl-C```
+Let take a look at that coverage data.  In the terminal, type the following command.  If you have been following along, yeoman server will be running.  You could stop it with ```Ctrl-C```, but let's keep that running and open a new terminal window.  Navigate to our repo path and execute the following:
+
 
 ```
 istanbul report
