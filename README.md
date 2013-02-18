@@ -50,12 +50,13 @@ Homebrew is dubbed _The missing package manager for OS X_ and for good reason.  
 ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 ```
 
+**Note:** If you choose not to or cannot install Homebrew, then follow the links provided rahter than using the ```brew``` commands below.
 
 ### [NodeJS](http://nodejs.org)
 
-While ICG does not use Node JS in most of the back end components, many of the development tools and the local development server use Node JS.  
+While ICG does not use Node JS in most of the back end components, many of the development tools and the local development server use Node JS.  In the terminal
 
-Download and install.
+Download and install
 
 
 ### [MongoDb](http://www.mongodb.org/)
@@ -521,7 +522,7 @@ Now let's add a person using curl.  In a new terminal window add a new person, u
 curl  -X POST -H "Content-Type:application/json" http://localhost:3501/api/people --data '{"name":"Joe Baggadonuts", "phone":"555-867-9309"}'
 ```
 
-Now look for people again.  Go to  http://localhost:3501/api/people](http://localhost:3501/api/people).  You should see something like this:
+Now look for people again.  Go to  [http://localhost:3501/api/people](http://localhost:3501/api/people).  You should see something like this:
 
 ```
 [
@@ -537,7 +538,7 @@ Go ahead and add a few more.
 
 To query for a specific resource, the API accepts a query parameter.  This paramter uses MongoDB query syntax.  [http://localhost:3501/api/people?query={"name":"Joe Baggadonuts"}](http://localhost:3501/api/people?query={%22name%22:%22Joe%20Baggadonuts%22})  will return only the first record that we added above.
 
-Now, let's get at that same data using the mongo shell.  Barista's API puts data into a databse called `barista'  So back in the terminal window where you opened ```mongo```, type the following command to use the Barista database.
+Now, let's get at that same data using the mongo shell.  Barista's API puts data into a databse called ```barista``` So back in the terminal window where you opened ```mongo```, type the following command to use the Barista database.
 
 ```
 use barista
