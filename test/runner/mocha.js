@@ -3,14 +3,15 @@ require({
   paths: {
     // Libraries.
     "icg": "../../istanbul/scripts",
-    "test": "../spec"
+    "test": "../spec",
+    "fixtures": "../fixtures"
+
   }
 
 }, [
 
 // Load specs
-'test/sample.spec',
-'test/greeter.spec' // Add your test here
+'test/merge-model.spec'
 ], function() {
   'use strict';
   

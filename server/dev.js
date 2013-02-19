@@ -41,7 +41,7 @@
 
   path = require('path');
 
-  dbName = "dev";
+  dbName = "barista";
 
   module.exports = function(publicDir, port, cb) {
     var db, host, parseExcel, serverPort, views;
